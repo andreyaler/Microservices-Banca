@@ -20,7 +20,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Slf4j
-@RequestMapping("/customer")
+@RequestMapping("/fixedterm")
 @AllArgsConstructor
 @RestController
 public class FixedTermController {
@@ -32,7 +32,7 @@ public class FixedTermController {
 
 	@GetMapping
 	public Flux<FixedTerm> getAll() {
-		log.info("");
+		log.info("Enter the getAll method");
 		return fixedTermService.findAll();
 	}
 
@@ -44,19 +44,19 @@ public class FixedTermController {
 
 	@PutMapping("{id}")
 	public Mono updateById(@PathVariable("id") final String id, @RequestBody final FixedTerm fixedTerm) {
-		log.info("");
+		log.info("Enter the updateById method");
 		return fixedTermService.update(id, fixedTerm);
 	}
 
 	@PostMapping
 	public Mono create(@RequestBody final FixedTerm fixedTerm) {
-		log.info("");
+		log.info("Enter the create method");
 		return fixedTermService.create(fixedTerm);
 	}
 
 	@DeleteMapping("{id}")
 	public Mono delete(@PathVariable final String id) {
-		log.info("");
+		log.info("Enter the delete method");
 		return fixedTermService.delete(id);
 	}
 }

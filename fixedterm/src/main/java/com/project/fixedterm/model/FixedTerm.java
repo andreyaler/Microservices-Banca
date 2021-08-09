@@ -1,10 +1,6 @@
 package com.project.fixedterm.model;
 
-import java.util.Date;
-
 import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.Transient;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
@@ -16,19 +12,15 @@ import lombok.ToString;
 @Builder
 @AllArgsConstructor
 @ToString
-@Document (collection = "fixedTerm")
+@Document (collection = "fixedterm")
 public class FixedTerm {
 	
 	@Id
 	private String id;
-	
-	@Indexed(unique = true)
-	private String numberDocument;
-	
-	private String firstName;
-	private String lastName;
-	private Date birthday;
-	private String address;
-	private String customerType;
+	private String fixedTermCode;
+	private String description;
+	private String fixedTermNumber;
+	private String amount;
+	private String documentNumber;
 
 }
