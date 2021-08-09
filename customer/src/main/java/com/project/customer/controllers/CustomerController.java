@@ -24,8 +24,6 @@ import reactor.core.publisher.Mono;
 @RestController
 public class CustomerController {
 
-	WebClient webclient;
-	
 	@Autowired
 	private CustomerService customerService;
 

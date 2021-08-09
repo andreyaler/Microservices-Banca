@@ -25,8 +25,6 @@ import reactor.core.publisher.Mono;
 @RestController
 public class FixedTermController {
 
-	WebClient webclient;
-	
 	@Autowired
 	private FixedTermService fixedTermService;
 
